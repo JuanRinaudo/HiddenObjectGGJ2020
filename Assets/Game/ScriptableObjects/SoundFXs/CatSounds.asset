@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 666b698b6797d7842894240e696e3ad3, type: 3}
+  m_Name: CatSounds
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 7115b2a2d4670f44287309d486009ad7, type: 3}
+  - {fileID: 8300000, guid: 7896355ea64d56d479a3fe8fc496cf7b, type: 3}
+  - {fileID: 8300000, guid: 9c44e96f21bda514cb3d0f0ed44e3ddd, type: 3}
+  - {fileID: 8300000, guid: 74b60a0ff6f713044978ef3b7c2f158e, type: 3}
+  - {fileID: 8300000, guid: b10780b0af624ab4782df329d29cfda8, type: 3}
+  - {fileID: 8300000, guid: 864644dd219ae9946888a6aed243f5b8, type: 3}
+  volume: 0.7

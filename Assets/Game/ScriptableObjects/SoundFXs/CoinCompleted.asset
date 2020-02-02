@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CoinCompleted
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: c597afec72783a842b9ee7b24d640224, type: 3}
+  - {fileID: 8300000, guid: 5756424a548b21649961449bfa5c740d, type: 3}
   volume: 1

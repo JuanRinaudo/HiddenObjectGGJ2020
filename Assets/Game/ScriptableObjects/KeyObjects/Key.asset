@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Key
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 894ee750d5c56ea49b93ce190a6b3168, type: 3}
+  interactSprite: {fileID: 21300000, guid: c66913732242a6a4889cd3c3ccc2e65d, type: 3}

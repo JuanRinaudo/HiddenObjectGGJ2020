@@ -19,6 +19,9 @@ public class Sound : MonoBehaviour
 
     public SoundFX pickupSound;
     public SoundFX runeSound;
+    public SoundFX endSound;
+    public SoundFX startSound;
+    public SoundFX doorSlamSound;
 
     private void Awake()
     {

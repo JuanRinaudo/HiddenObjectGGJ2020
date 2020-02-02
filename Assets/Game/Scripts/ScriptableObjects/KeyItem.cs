@@ -7,5 +7,7 @@ public class KeyItem : ScriptableObject
 {
 
     public Sprite sprite;
+    public Sprite interactSprite;
+    public bool consumeOnUse = true;
 
 }

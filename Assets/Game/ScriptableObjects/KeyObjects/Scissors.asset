@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Scissors
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 22f9af89f5af72d4ab07dc09d96ed798, type: 3}
+  interactSprite: {fileID: 21300000, guid: dc472b9f6943db04abc508fe92ef5e4c, type: 3}

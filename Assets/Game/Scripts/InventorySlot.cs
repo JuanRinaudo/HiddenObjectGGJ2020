@@ -17,10 +17,14 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public bool interactuable = true;
     private bool dragging;
 
+    private int interactions;
+
+    public static InventorySlot slotBeingDragged;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
-        initialPosition = rectTransform.position;
+        initialPosition = rectTransform.anchoredPosition;
         image = GetComponent<Image>();
         image.color = new Color(0, 0, 0, 0);
         baseSprite = image.sprite;
@@ -52,9 +56,10 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void OnPointerDown (PointerEventData eventData)
     {
-        if(interactuable)
+        if(interactuable && slotBeingDragged == null)
         {
             dragging = true;
+            slotBeingDragged = this;
         }
     }
 
@@ -66,17 +71,55 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
             RaycastHit2D hit = Physics2D.Raycast(mouseWorldPosition, Vector2.zero, 0f);
             if (hit.transform)
             {
-                InteractionDropKeyItem interaction = hit.transform.GetComponent<InteractionDropKeyItem>();
-                if (interaction != null && interaction.targetItem == item)
+                InteractionDropKeyItem[] allInteractions = hit.transform.GetComponents<InteractionDropKeyItem>();
+                foreach(InteractionDropKeyItem interaction in allInteractions)
                 {
-                    interaction.DoInteractions();
-                    SetItem(null);
+                    if (interaction != null && interaction.targetItem == item)
+                    {
+                        interaction.DoInteractions();
+                        if(item.consumeOnUse)
+                        {
+                            SetItem(null);
+                        }
+                    }
                 }
             }
 
+            interactions = 0;
             dragging = false;
-            rectTransform.position = initialPosition;
+            slotBeingDragged = null;
+            rectTransform.anchoredPosition = initialPosition;
         }
+    }
+
+    private void CheckSprite()
+    {
+        if(interactions > 0 && item.interactSprite != null)
+        {
+            image.sprite = item.interactSprite;
+        }
+        else
+        {
+            image.sprite = item.sprite;
+        }
+    }
+
+    public void CheckInteracteable(InteractionDropKeyItem interaction)
+    {
+        if(interaction.targetItem == item)
+        {
+            interactions++;
+        }
+        CheckSprite();
+    }
+
+    public void UncheckInteracteable(InteractionDropKeyItem interaction)
+    {
+        if (interaction.targetItem == item)
+        {
+            interactions--;
+        }
+        CheckSprite();
     }
 
 }

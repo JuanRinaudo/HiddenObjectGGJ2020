@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Match
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 695f2d41e8dfe4448ab0b3e997a44152, type: 3}
+  interactSprite: {fileID: 21300000, guid: 8c62c574bec1330429e4a356bf77eb86, type: 3}
