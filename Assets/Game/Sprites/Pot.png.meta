@@ -74,12 +74,12 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 512
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -124,13 +124,9 @@ TextureImporter:
       - {x: 377.05078, y: 231.18225}
       - {x: 331.8047, y: 289.81543}
       - {x: 326.77734, y: 319.96964}
-      - {x: 296.61328, y: 345.09814}
-      - {x: 251.36719, y: 345.09814}
-      - {x: 129, y: 339.5}
-      - {x: -59, y: 344.5}
-      - {x: -322, y: 352.5}
-      - {x: -345.21094, y: 345.09814}
-      - {x: -358.6172, y: 336.722}
+      - {x: 302, y: 358.5}
+      - {x: 30, y: 358.5}
+      - {x: -361, y: 358.5}
       - {x: -378.72656, y: 283.1145}
       - {x: -418.9453, y: 252.9603}
       - {x: -418.9453, y: 199.35281}

@@ -76,11 +76,12 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
                 {
                     if (interaction != null && interaction.targetItem == item)
                     {
-                        interaction.DoInteractions();
-                        if(item.consumeOnUse)
+                        if (item.consumeOnUse)
                         {
                             SetItem(null);
                         }
+
+                        interaction.DoInteractions();
                     }
                 }
             }
